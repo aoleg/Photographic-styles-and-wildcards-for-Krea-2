@@ -142,7 +142,7 @@ a red vintage bicycle leaning against a brick wall, __styles/film-stocks__, __st
 
 The `{prompt}` wrapper is stripped from every entry (wildcards get inserted into your own prompt
 text rather than wrapping it), and category names are slugified (`Camera position & optics` ->
-`camera-position-optics`).
+`camera-position-optics`). Negatives are cleaned out.
 
 ## Known limitations
 
