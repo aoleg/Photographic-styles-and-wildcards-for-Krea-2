@@ -1,6 +1,4 @@
-# Krea-2 Styles for A1111 / Forge / Forge Neo
-
-TL&DR: Photographic styles for WebUI Forge Neo for Krea-2 (LLM encoder, no voodoo quality enhancers).
+# Krea-2 Styles and Wildcards for A1111 / Forge / Forge Neo
 
 A `styles.csv` style library written specifically for **LLM-encoder image models** (Krea-2, and
 anything else using a Qwen3-VL / T5 / similar text encoder), as opposed to the CLIP-L/CLIP-G
@@ -59,12 +57,12 @@ usually redundant rather than harmful).
 | Section | What it controls | Count |
 |---|---|---|
 | **Quality** | Baseline image fidelity, no posing/staging implications | 2 |
-| **Film Stocks** | Specific analog/instant film emulsions | 23 |
-| **Decades** | Photographic eras and their dominant visual conventions, 1920s-2020s | 35 |
+| **Film Stocks** | Specific analog/instant film emulsions | 22 |
+| **Decades** | Photographic eras and their dominant visual conventions, 1920s-2020s | 34 |
 | **Digital Snapshots** | Amateur phone photography: candid, night-flash, selfies (arm's-length and fisheye), mirror, tourist, food | 7 |
 | **Flash Photography** | Direct/on-camera flash as a lighting event, from clean to chaotic to startled | 7 |
 | **The Misc Bin** | Found-footage devices, toy/optical cameras, and 19th-century processes | 16 |
-| **Lighting** | Direction and quality of light only, independent of genre or setting | 8 |
+| **Lighting** | Direction and quality of light only, independent of genre or setting | 9 |
 | **Composition** | Where things sit in the frame | 10 |
 | **Camera Position & Optics** | Where the camera is and what lens is implied | 8 |
 | **Color & Tonality** | Grade/palette, independent of film stock or era | 8 |
@@ -72,7 +70,7 @@ usually redundant rather than harmful).
 | **Moment & Motion** | How time and movement are frozen or smeared | 5 |
 | **Focus & Depth** | Depth of field, independent of lens or stock | 3 |
 
-**Total: 139 styles across 13 sections.**
+**Total: 138 styles across 13 sections.**
 
 ### Category notes
 
@@ -127,6 +125,35 @@ Style Name [Short Look Descriptor]
 Standard A1111/Forge `styles.csv`: `name,prompt,negative_prompt`, with `{prompt}` as the
 placeholder for whatever subject text the person enters. File is plain ASCII/UTF-8 with no
 Windows-1252 dash characters (`0x96`/`0x97`), which are known to break the WebUI CSV parser.
+
+## Wildcard version
+
+`styles_wildcards.yaml` is the same 138 styles converted for the
+[sd-dynamic-prompts](https://github.com/adieyal/sd-dynamic-prompts) extension, for people who
+want to insert a random style inline rather than pick one from the Forge/A1111 style dropdown.
+
+Each CSV category becomes a wildcard accessed as `__styles/<category>__`, e.g.:
+
+```
+a red vintage bicycle leaning against a brick wall, __styles/film-stocks__, __styles/lighting__
+```
+
+The `{prompt}` wrapper is stripped from every entry (wildcards get inserted into your own prompt
+text rather than wrapping it), and category names are slugified (`Camera position & optics` ->
+`camera-position-optics`).
+
+**Negatives don't carry over automatically.** This is a real gap between the two formats, not a
+detail I glossed over: `styles.csv` pairs each style with its own negative prompt, but
+Dynamic Prompts wildcards have no equivalent mechanism — there's no "if you pick this positive,
+use this negative" link. The file includes a parallel `styles_negative` tree with matching
+category names and list order, but `__styles/x__` and `__styles_negative/x__` are drawn
+independently and will not stay in sync during generation. In practice this matters less than it
+sounds: most film-stock and decade negatives are the same one shared line ("a clinical digital
+photograph with noise-free rendering, oversharpened edges, and an HDR-processed look"), so pasting
+that single line as a static negative covers most of the pack. Only Quality, Digital Snapshots,
+Flash Photography, The Misc Bin, Lighting, Composition, Camera Position & Optics, Color &
+Tonality, Atmosphere, Moment & Motion, and Focus & Depth have negatives that differ per entry, and
+those are the only categories where you lose anything by not pairing them.
 
 ## Known limitations
 
