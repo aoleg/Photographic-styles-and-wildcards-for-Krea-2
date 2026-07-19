@@ -144,19 +144,6 @@ The `{prompt}` wrapper is stripped from every entry (wildcards get inserted into
 text rather than wrapping it), and category names are slugified (`Camera position & optics` ->
 `camera-position-optics`).
 
-**Negatives don't carry over automatically.** This is a real gap between the two formats, not a
-detail I glossed over: `styles.csv` pairs each style with its own negative prompt, but
-Dynamic Prompts wildcards have no equivalent mechanism — there's no "if you pick this positive,
-use this negative" link. The file includes a parallel `styles_negative` tree with matching
-category names and list order, but `__styles/x__` and `__styles_negative/x__` are drawn
-independently and will not stay in sync during generation. In practice this matters less than it
-sounds: most film-stock and decade negatives are the same one shared line ("a clinical digital
-photograph with noise-free rendering, oversharpened edges, and an HDR-processed look"), so pasting
-that single line as a static negative covers most of the pack. Only Quality, Digital Snapshots,
-Flash Photography, The Misc Bin, Lighting, Composition, Camera Position & Optics, Color &
-Tonality, Atmosphere, Moment & Motion, and Focus & Depth have negatives that differ per entry, and
-those are the only categories where you lose anything by not pairing them.
-
 ## Known limitations
 
 - Name-anchor strength varies. Famous stocks and looks (Kodachrome, Tri-X, Velvia, Portra,
