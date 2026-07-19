@@ -1,8 +1,10 @@
-# Krea-2 Styles and Wildcards for A1111 / Forge / Forge Neo
+# Krea-2 Styles and Wildcards for Forge Neo
 
 A `styles.csv` style library written specifically for **LLM-encoder image models** (Krea-2, and
 anything else using a Qwen3-VL / T5 / similar text encoder), as opposed to the CLIP-L/CLIP-G
 encoders that `styles.csv` was originally designed around.
+
+The YAML wildcard version can be used with Forge Neo / Comfy / SwarmUI.
 
 ## Why this exists
 
