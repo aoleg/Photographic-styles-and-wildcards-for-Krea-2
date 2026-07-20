@@ -6,7 +6,9 @@ encoders that `styles.csv` was originally designed around.
 
 The YAML wildcard version can be used with Forge Neo / Comfy / SwarmUI.
 
-Update: now including some DDR and Soviet film stocks.
+Update: now including some DDR and Soviet film stocks. The category names now refer to wildcards;
+place the YAML file into the "film" subfolder of your wildcards folder for this to work. 
+sd-webui-forge-neo\extensions\sd-dynamic-prompts\wildcards\film
 
 ## Why this exists
 
@@ -135,11 +137,18 @@ Windows-1252 dash characters (`0x96`/`0x97`), which are known to break the WebUI
 [sd-dynamic-prompts](https://github.com/adieyal/sd-dynamic-prompts) extension, for people who
 want to insert a random style inline rather than pick one from the Forge/A1111 style dropdown.
 
-Each CSV category becomes a wildcard accessed as `__styles/<category>__`, e.g.:
+Each CSV category becomes a wildcard accessed as `__styles/<category>__` or `__/film/styles/<category>__`
+if you placed it into the `film` subfolder, e.g.:
 
 ```
 a red vintage bicycle leaning against a brick wall, __styles/film-stocks__, __styles/lighting__
 ```
+or
+```
+a red vintage bicycle leaning against a brick wall, __film/styles/film-stocks__, __film/styles/lighting__
+```
+
+
 
 The `{prompt}` wrapper is stripped from every entry (wildcards get inserted into your own prompt
 text rather than wrapping it), and category names are slugified (`Camera position & optics` ->
