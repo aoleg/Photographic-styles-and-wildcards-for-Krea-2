@@ -6,6 +6,8 @@ encoders that `styles.csv` was originally designed around.
 
 The YAML wildcard version can be used with Forge Neo / Comfy / SwarmUI.
 
+Update: now including some DDR and Soviet film stocks.
+
 ## Why this exists
 
 The `styles.csv` format goes back to SD 1.5 / SDXL days, and most style packs floating around
@@ -56,23 +58,22 @@ usually redundant rather than harmful).
 
 ## Categories
 
-| Section | What it controls | Count |
-|---|---|---|
-| **Quality** | Baseline image fidelity, no posing/staging implications | 2 |
-| **Film Stocks** | Specific analog/instant film emulsions | 22 |
-| **Decades** | Photographic eras and their dominant visual conventions, 1920s-2020s | 34 |
-| **Digital Snapshots** | Amateur phone photography: candid, night-flash, selfies (arm's-length and fisheye), mirror, tourist, food | 7 |
-| **Flash Photography** | Direct/on-camera flash as a lighting event, from clean to chaotic to startled | 7 |
-| **The Misc Bin** | Found-footage devices, toy/optical cameras, and 19th-century processes | 16 |
-| **Lighting** | Direction and quality of light only, independent of genre or setting | 9 |
-| **Composition** | Where things sit in the frame | 10 |
-| **Camera Position & Optics** | Where the camera is and what lens is implied | 8 |
-| **Color & Tonality** | Grade/palette, independent of film stock or era | 8 |
-| **Atmosphere** | Weather and air conditions in the scene itself | 7 |
-| **Moment & Motion** | How time and movement are frozen or smeared | 5 |
-| **Focus & Depth** | Depth of field, independent of lens or stock | 3 |
+| Section | What it controls |
+|---|---|
+| **Quality** | Baseline image fidelity, no posing/staging implications |
+| **Film Stocks** | Specific analog/instant film emulsions |
+| **Decades** | Photographic eras and their dominant visual conventions, 1920s-2020s |
+| **Digital Snapshots** | Amateur phone photography: candid, night-flash, selfies (arm's-length and fisheye), mirror, tourist, food |
+| **Flash Photography** | Direct/on-camera flash as a lighting event, from clean to chaotic to startled |
+| **The Misc Bin** | Found-footage devices, toy/optical cameras, and 19th-century processes |
+| **Lighting** | Direction and quality of light only, independent of genre or setting |
+| **Composition** | Where things sit in the frame |
+| **Camera Position & Optics** | Where the camera is and what lens is implied |
+| **Color & Tonality** | Grade/palette, independent of film stock or era |
+| **Atmosphere** | Weather and air conditions in the scene itself |
+| **Moment & Motion** | How time and movement are frozen or smeared |
+| **Focus & Depth** | Depth of field, independent of lens or stock |
 
-**Total: 138 styles across 13 sections.**
 
 ### Category notes
 
