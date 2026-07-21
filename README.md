@@ -164,7 +164,7 @@ Windows-1252 dash characters (`0x96`/`0x97`), which are known to break the WebUI
 
 ## Wildcard version
 
-`styles_wildcards.yaml` is the same 138 styles converted for the
+`photographica.yaml` is the same 138 styles converted for the
 [sd-dynamic-prompts](https://github.com/adieyal/sd-dynamic-prompts) extension, for people who
 want to insert a random style inline rather than pick one from the Forge/A1111 style dropdown.
 
