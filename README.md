@@ -6,9 +6,40 @@ encoders that `styles.csv` was originally designed around.
 
 The YAML wildcard version can be used with Forge Neo / Comfy / SwarmUI.
 
-Update: now including some DDR and Soviet film stocks. The category names now refer to wildcards;
-place the YAML file into the "film" subfolder of your wildcards folder for this to work. 
+The category names now refer to wildcards; place the YAML file into the "film" subfolder of your
+wildcards folder for this to work, e.g.
 sd-webui-forge-neo\extensions\sd-dynamic-prompts\wildcards\film
+
+Differences between V1 (descriptive) and V2 (fully stackable):
+The "descriptive" version uses longer, more descriptive phrasing. The "fully stackable" version is
+significantly more compact; the film stocks should now exclusively affect tonal and color values,
+not composition. For example:
+
+V1:
+`Kodak Portra 400 [Soft & Flattering],"The photo is in the style of Kodak Portra 400 film: warm natural skin tones, fine grain, gentle contrast with shadow and highlight detail retained, and an understated, flattering portrait look.`
+
+V2:
+`Kodak Portra 400 [Soft & Flattering],"Style and tones: Kodak Portra 400, with warm natural skin tones, gentle contrast, retained shadow and highlight detail, and fine grain.`
+
+In my tests, the V2 is more subtle, affects composition less than the original, and the stacking works better.
+Every entry now opens with a labelled axis, so they concatenate cleanly. Nine labels:
+
+* Style and tones: — all film stocks (Western, Soviet, DDR).
+* Era: — decades.
+* Style: — digital snapshots and the misc bin (device/process looks).
+* Lighting: — the lighting section and flash (flash is a lighting event).
+* Composition: — framing, camera position, and motion.
+* Color: — the standalone grade section.
+* Atmosphere:, Focus:, Quality: — the rest.
+
+Example:
+
+V1:
+`Low Angle [Looking Up & Heroic],"The photo is taken from a low angle looking up at the subject: the camera positioned near ground level and tilted upward, the subject towering against the sky or ceiling, converging vertical lines rising through the frame, foreground ground plane compressed at the bottom edge, and an imposing, monumental presence."`
+
+V2:
+`Low Angle [Looking Up & Heroic],"Composition: viewed from below, low-angle shot, the subject towering, and converging verticals rising through the frame.",`
+
 
 ## Why this exists
 
