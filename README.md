@@ -16,10 +16,10 @@ significantly more compact; the film stocks should now exclusively affect tonal 
 not composition. For example:
 
 V1:
-`Kodak Portra 400 [Soft & Flattering],"The photo is in the style of Kodak Portra 400 film: warm natural skin tones, fine grain, gentle contrast with shadow and highlight detail retained, and an understated, flattering portrait look.`
+`Kodak Portra 400 [Soft & Flattering],"The photo is in the style of Kodak Portra 400 film: warm natural skin tones, fine grain, gentle contrast with shadow and highlight detail retained, and an understated, flattering portrait look.",`
 
 V2:
-`Kodak Portra 400 [Soft & Flattering],"Style and tones: Kodak Portra 400, with warm natural skin tones, gentle contrast, retained shadow and highlight detail, and fine grain.`
+`Kodak Portra 400 [Soft & Flattering],"Style and tones: Kodak Portra 400, with warm natural skin tones, gentle contrast, retained shadow and highlight detail, and fine grain.",`
 
 In my tests, the V2 is more subtle, affects composition less than the original, and the stacking works better.
 Every entry now opens with a labelled axis, so they concatenate cleanly. Nine labels:
